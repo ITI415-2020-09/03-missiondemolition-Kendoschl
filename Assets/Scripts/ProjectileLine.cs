@@ -80,11 +80,11 @@ public class ProjectileLine : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         if (poi == null)
         {
-            if(FollowCam.POI.tag == "Projectile")
+            if (FollowCam.POI.tag == "Projectile")
             {
                 poi = FollowCam.POI;
             }
@@ -97,6 +97,7 @@ public class ProjectileLine : MonoBehaviour
         {
             return;
         }
+
         AddPoint();
         if(FollowCam.POI == null)
         {
